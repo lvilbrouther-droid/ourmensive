@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensiversary</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- SLIDE 1 -->
+  <div class="slide active" id="slide1">
+
+    <button class="btn-start" onclick="goToSlide(2)">
+      Mulai Cerita Kita ↓
+    </button>
+
+  </div>
+
+  <!-- WRAPPER SCROLL -->
+  <div id="scrollWrapper">
+
+    <!-- SLIDE 2 -->
+    <div class="slide" id="slide2">
+
+      <div class="jar-click" onclick="klikJar()"></div>
+
+      <button class="btn-love" onclick="klikJar()">
+        Alasan Aku Sayang Kamu ❤️
+      </button>
+
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide" id="slide4">
+
+      <button class="btn-next" onclick="openLetter()">
+        Buka Kotak Surat ❤️
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide" id="slide3">
+
+    <button class="btn-back" onclick="goToSlide(2)">
+      ←
+    </button>
+
+  </div>
+
+  <!-- SLIDE 5 : LETTERS -->
+<div class="slide" id="slide5">
+
+  <button class="btn-back" onclick="goToSlide(2)">
+    ←
+  </button>
+
+  <div class="letters-container">
+
+
+    <div id="lettersList"></div>
+
+    <!-- tombol tambah -->
+    <button class="btn-add" onclick="goToSlide(6)">
+      +
+    </button>
+
+  </div>
+
+</div>
+
+<!-- SLIDE 6 : FORM -->
+<div class="slide" id="slide6">
+
+  <button class="btn-back" onclick="goToSlide(5)">
+    ←
+  </button>
+
+  <div class="form-container">
+  
+
+    <textarea
+      id="letterMessage"
+      placeholder="Tulis surat atau doa terbaikmu..."
+    ></textarea>
+
+    <input
+      type="text"
+      id="letterName"
+      placeholder="Dari siapa?"
+    >
+
+    <button class="btn-save" onclick="saveLetter()">
+      Simpan Surat 💖
+    </button>
+
+  </div>
+
+</div>
+
+<!-- POPUP SURAT -->
+<div id="popupLetter">
+
+  <div class="popup-content">
+
+    <h2 id="popupName"></h2>
+
+    <p id="popupMessage"></p>
+
+    <button onclick="closePopup()">
+      Tutup
+    </button>
+
+  </div>
+
+</div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
